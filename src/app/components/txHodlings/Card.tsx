@@ -8,7 +8,7 @@ import {
   CoinName,
   CoinSymbol,
   Card as MainCard,
-} from "@/app/styles/TxHodlings/HodlingScreen";
+} from "@/app/styles/TxHodlings/HodlingScreen.styles";
 import { FlexContainer } from "@/app/styles/shared/Container.styles";
 
 interface ICardProps {

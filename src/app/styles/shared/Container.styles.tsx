@@ -28,6 +28,10 @@ interface IPositionContainer {
   $right?: string;
 }
 
+interface IScrollerContainer {
+  $overflow: string;
+}
+
 export const FlexContainer = styled.div<IFlexContainer>`
   display: flex;
   flex-wrap: ${({ $flexWrap }) => $flexWrap || "nowrap"};
@@ -48,4 +52,8 @@ export const PositionContainer = styled(FlexContainer)<IPositionContainer>`
   left: ${({ $left }) => $left};
   bottom: ${({ $bottom }) => $bottom};
   right: ${({ $right }) => $right};
+`;
+
+export const ScrollerContainer = styled(FlexContainer)<IScrollerContainer>`
+  overflow: ${({ $overflow }) => $overflow};
 `;

@@ -45,17 +45,19 @@ export interface IWalletTokenBalance {
 export interface IWalletTokenBalanceResponse
   extends IGeneric<IWalletTokenBalance> {}
 
+export interface ITransactionsByAddressResult {
+  blockTimestamp: string;
+  transactionHash: string;
+  blockNumber: string;
+  transactionIndex: number;
+  fromAddress: string;
+  toAddress: string;
+  contractAddress: string | null;
+  value: string;
+}
+
 export interface ITransactionsByAddress {
-  paginatedItems: {
-    blockTimestamp: string;
-    transactionHash: string;
-    blockNumber: string;
-    transactionIndex: number;
-    fromAddress: string;
-    toAddress: string;
-    contractAddress: string | null;
-    value: string;
-  }[];
+  paginatedItems: ITransactionsByAddressResult[];
   totalItems: number;
   totalPages: number;
   pageNumber: number;

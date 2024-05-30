@@ -11,7 +11,7 @@ import {
   HodlingContainer,
   HodlingScroller,
   ViewButton,
-} from "@/app/styles/TxHodlings/HodlingScreen";
+} from "@/app/styles/TxHodlings/HodlingScreen.styles";
 import { SearchText } from "@/app/styles/shared/Text.styles";
 import {
   FlexContainer,

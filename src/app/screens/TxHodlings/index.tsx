@@ -35,7 +35,6 @@ const TxHodlings = () => {
       if (node !== null) {
         setTabControllerWidth(`${node.getBoundingClientRect().width}px`);
         setTabControllerNode(node);
-        console.log(`${node.getBoundingClientRect().width}px`);
       }
     },
     [tabState]

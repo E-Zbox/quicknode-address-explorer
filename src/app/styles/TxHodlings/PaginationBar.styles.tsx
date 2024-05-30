@@ -17,26 +17,14 @@ export const MainPaginationBar = styled.main<IMainPaginationBar>`
   align-items: center;
   align-self: center;
   justify-content: space-evenly;
-  box-shadow: ${({
-    $hideShadow,
-    theme: {
-      primary: { bgColor },
-    },
-  }) => ($hideShadow ? "" : `2px 3px 15px ${bgColor}3`)};
-  background-color: ${({
-    theme: {
-      primary: { bgColor },
-    },
-  }) => `${bgColor}0`};
+  box-shadow: ${({ $hideShadow, theme: { darkPurple01 } }) =>
+    $hideShadow ? "" : `2px 3px 15px ${darkPurple01}33`};
+  background-color: ${({ theme: { darkPurple01 } }) => `${darkPurple01}00`};
   border-radius: 5px;
   margin: calc(var(--ten-px)) 0px;
 
   * {
-    color: ${({
-      theme: {
-        primary: { bgColor },
-      },
-    }) => bgColor};
+    color: ${({ theme: { darkPurple01 } }) => darkPurple01};
   }
 `;
 
@@ -62,27 +50,13 @@ export const PageInput = styled.input`
   padding: var(--ten-px);
   font-size: 1.4rem;
   font-weight: bolder;
-  background-color: ${({
-    theme: {
-      primary: { textColor },
-    },
-  }) => `${textColor}21`};
+  background-color: ${({ theme: { white } }) => `${white}21`};
   margin-right: var(--ten-px);
   border-radius: 3px;
-  outline: 1px solid
-    ${({
-      theme: {
-        primary: { textColor },
-      },
-    }) => `${textColor}2e`};
+  outline: 1px solid ${({ theme: { white } }) => `${white}2e`};
 
   &:focus {
-    outline: 2px solid
-      ${({
-        theme: {
-          primary: { blue },
-        },
-      }) => `${blue}94`};
+    outline: 2px solid ${({ theme: { blue } }) => `${blue}94`};
   }
 `;
 
@@ -92,11 +66,7 @@ export const Button = styled.button<IButton>`
   outline: none;
   display: grid;
   place-items: center;
-  background: ${({
-    theme: {
-      primary: { textColor },
-    },
-  }) => `${textColor}15`};
+  background: ${({ theme: { white } }) => `${white}15`};
   scale: 1;
   border-radius: 5px;
   padding: calc(var(--seven-px) * 1.5);
@@ -111,15 +81,10 @@ export const Button = styled.button<IButton>`
       ${({ $moveToLeft }) => ($moveToLeft ? "-5px" : "5px")}
     );
     background: linear-gradient(
-      ${({
-        $moveToLeft,
-        theme: {
-          primary: { textColor },
-        },
-      }) =>
+      ${({ $moveToLeft, theme: { white } }) =>
         $moveToLeft
-          ? `to left, ${textColor}75, ${textColor}05`
-          : `to left, ${textColor}05, ${textColor}75`}
+          ? `to left, ${white}75, ${white}05`
+          : `to left, ${white}05, ${white}75`}
     );
   }
 `;

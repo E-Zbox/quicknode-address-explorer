@@ -57,8 +57,6 @@ export const fetchNFTs = async (
       page,
     });
 
-    console.log(result);
-
     response = {
       data: {
         ...result,
@@ -79,7 +77,7 @@ export const fetchNFTs = async (
 
 export const getTransactionsByAddress = async (
   address: string,
-  page: 1
+  page = 1
 ): Promise<ITransactionsByAddressResponse> => {
   let response: ITransactionsByAddressResponse = {
     data: {
