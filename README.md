@@ -1,7 +1,11 @@
 <div align="center">
     <img src="./public/logo.png" width="300px" />
     <h1>Quicknode Address Explorer</h1>
-    <p>Your personal blockchain detective, letting you uncover the digital footprint of any wallet address. Explore their NFT collection, delve into their crypto holdings, and trace their transaction history – all in one place.</p>
+    <p>
+    Your personal blockchain detective, letting you uncover the digital footprint of any wallet address.
+    <br>
+    Explore their NFT collection, delve into their crypto holdings, and trace their transaction history – all in one place.
+    </p>
 </div>
 
 ### Table of Contents
