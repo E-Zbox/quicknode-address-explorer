@@ -35,7 +35,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 <div align="left">
     <img alt="Quicknode" src="https://www.quicknode.com/docs/img/logo.svg"  height="30px" title="Quicknode" />
     <img alt="Zustand" src="https://docs.pmnd.rs/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fzustand-icon.8507f6a0.png&w=2048&q=75" height="30px" title="Zustand" />
-    <img alt="Next.js" src="./public/next.svg" height="30px" title="Next.js" /> 
+    <img alt="Next.js" src="./public/next-light.svg" height="30px" title="Next.js" /> 
     <img alt="Styled-components" src="https://styled-components.com/nav-logo.png"  height="30px" title="Styled-components" />
 </div>
 
