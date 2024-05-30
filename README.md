@@ -48,7 +48,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 <div align="center">
     <img src="./screenshots/live-version.png" />
     <h3>
-        <a href="https://quicknode-address-explorer.vercel.app/">
+        <a href="https://quicknode-address-explorer.vercel.app/" target="_blank">
             Live App
         </a>
     </h3>
