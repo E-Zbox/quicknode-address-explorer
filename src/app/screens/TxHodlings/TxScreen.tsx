@@ -103,7 +103,7 @@ const TxScreen = () => {
       {addressTransactions.length > 0 ? (
         <ScrollerContainer
           ref={scrollerRef}
-          $height="100%"
+          $height="80%"
           $overflow="hidden scroll"
         >
           <FlexContainer $alignItems="center">

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { MutableRefObject, useEffect, useRef, useState } from "react";
 // styles
 import {
   CoinBalance,
@@ -10,6 +10,8 @@ import {
   Card as MainCard,
 } from "@/app/styles/TxHodlings/HodlingScreen.styles";
 import { FlexContainer } from "@/app/styles/shared/Container.styles";
+// utils
+import { screens } from "@/utils/data";
 
 interface ICardProps {
   decimals: number;
@@ -26,6 +28,44 @@ const Card = ({
   symbol,
   totalBalance,
 }: ICardProps) => {
+  const coinImageRef = useRef() as MutableRefObject<HTMLImageElement>;
+
+  const [imageLoadedState, setImageLoadedState] = useState(true);
+
+  const {
+    txHodlings: {
+      hodlingScreen: {
+        images: { unknownCoin },
+      },
+    },
+  } = screens;
+
+  const handleImageLoad = (e: Event) => {
+    if (e.type !== "error") {
+      setImageLoadedState(true);
+    } else {
+      setImageLoadedState(false);
+      console.log({ name, symbol });
+      console.log(coinImageRef.current.getAttribute("src"));
+    }
+  };
+
+  useEffect(() => {
+    coinImageRef.current.addEventListener("error", handleImageLoad);
+    coinImageRef.current.addEventListener("load", handleImageLoad);
+
+    return () => {
+      coinImageRef.current?.removeEventListener("error", handleImageLoad);
+      coinImageRef.current?.removeEventListener("load", handleImageLoad);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!imageLoadedState) {
+      coinImageRef.current.setAttribute("src", unknownCoin.src);
+    }
+  }, [imageLoadedState]);
+
   return (
     <MainCard $isGridView={isGridView} title={name}>
       <FlexContainer
@@ -37,6 +77,7 @@ const Card = ({
           <CoinImage
             src={`https://assets.coincap.io/assets/icons/${symbol.toLowerCase()}@2x.png`}
             alt={""}
+            ref={coinImageRef}
           />
         </CoinImageDiv>
         <CoinName $isGridView={isGridView}>

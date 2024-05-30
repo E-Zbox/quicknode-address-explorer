@@ -19,11 +19,11 @@ interface ITabScreen {
 export const MainTxHistory = styled.main<IMainTxHistory>`
   width: 100%;
   height: 100vh;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  position: relative;
   background: url(${({ $bgImg }) => $bgImg});
   background-repeat: repeat;
   background-size: auto 50%;
@@ -121,8 +121,7 @@ export const TabController = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items: flex-start;
   overflow: hidden;
 `;
 

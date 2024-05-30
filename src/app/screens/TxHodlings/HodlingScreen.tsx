@@ -116,7 +116,7 @@ const HodlingScreen = () => {
   }, [isGridView]);
 
   return (
-    <FlexContainer $height={"100%"}>
+    <FlexContainer $height={"fit-content"}>
       <PositionContainer
         $position="relative"
         $flexDirection="row"
